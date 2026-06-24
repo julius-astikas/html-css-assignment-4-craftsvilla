@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRAFTSVILLA – Kreative verksteder</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header med logo og navigasjon -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="#hjem" class="logo">CRAFTSVILLA</a>
+
+        <!-- Skjult avkrysningsboks – åpner menyen -->
+        <input
+          type="checkbox"
+          id="nav-toggle"
+          class="nav-toggle"
+          aria-hidden="true"
+        />
+
+        <!-- Burger-ikon som fungerer som knapp for menyen -->
+        <label for="nav-toggle" class="burger-label" aria-label="Åpne meny">
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+        </label>
+
+        <nav class="main-nav" aria-label="Hovednavigasjon">
+          <ul class="nav-list">
+            <li><a href="#hjem">Hjem</a></li>
+            <li><a href="#om-oss">Om oss</a></li>
+            <li><a href="#verksteder">Verksteder</a></li>
+            <li><a href="#booking">Booking</a></li>
+            <li><a href="#tilbakemeldinger">Tilbakemeldinger</a></li>
+            <li><a href="#galleri">Galleri</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero-seksjon med introduksjon og handlingsknapp -->
+      <section id="hjem" class="hero">
+        <div class="container hero-inner">
+          <div class="hero-text">
+            <p class="hero-label">Kreative verksteder for alle</p>
+            <h1>Finn roen og kreativiteten sammen hos CRAFTSVILLA</h1>
+            <p class="hero-intro">
+              Hos oss kan du male, lage mosaikk og utforske kreativitet i et
+              varmt og avslappende miljø. Perfekt for familier, venner og
+              kollegaer som vil ha kvalitetstid sammen.
+            </p>
+            <a href="#booking" class="btn btn-primary">Book verksted</a>
+          </div>
+          <div class="hero-image image-placeholder" aria-hidden="true">
+            <span>Verksted-bilde</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Om oss-seksjon -->
+      <section id="om-oss" class="about section">
+        <div class="container about-inner">
+          <div class="about-image image-placeholder" aria-hidden="true">
+            <span>Om oss-bilde</span>
+          </div>
+          <div class="about-text">
+            <h2>Om CRAFTSVILLA</h2>
+            <p>
+              CRAFTSVILLA er et lite kreativt verksted der alle kan komme for å
+              slappe av, lære noe nytt og skape noe med hendene. Vi tror på
+              fellesskap, lek og ro – uansett alder eller erfaring.
+            </p>
+            <p>
+              Enten du kommer med barn, venner eller kollegaer, tilbyr vi
+              verksteder som inviterer til samarbeid, latter og stolthet over
+              det du lager. Alt materiell er klart når du kommer, så du kan bare
+              sette deg ned og nyte prosessen.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Verksteder med priser og inkludert materiell -->
+      <section id="verksteder" class="workshops section">
+        <div class="container">
+          <div class="section-header">
+            <h2>Våre verksteder</h2>
+            <p>
+              Velg mellom tre populære verksteder. Alle pakker inkluderer ramme
+              og alt du trenger for å komme i gang.
+            </p>
+          </div>
+
+          <div class="workshop-cards">
+            <!-- Mosaikk -->
+            <article class="workshop-card">
+              <div class="card-image image-placeholder" aria-hidden="true">
+                <span>Mosaikk</span>
+              </div>
+              <div class="card-content">
+                <h3>Mosaikk Kunst</h3>
+                <p class="price">400 kr</p>
+                <p class="card-description">
+                  Lag et fargerikt mosaikkbilde med små steiner på en treplate.
+                </p>
+                <ul class="included-list">
+                  <li>Ramme</li>
+                  <li>Treplate i A4-størrelse</li>
+                  <li>Små fargede steiner</li>
+                  <li>Gummi (lim)</li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- Akvarell -->
+            <article class="workshop-card">
+              <div class="card-image image-placeholder" aria-hidden="true">
+                <span>Akvarell</span>
+              </div>
+              <div class="card-content">
+                <h3>Akvarellmaling</h3>
+                <p class="price">200 kr</p>
+                <p class="card-description">
+                  Mal et mykt og levende bilde med akvarellfarger og en ferdig
+                  mal.
+                </p>
+                <ul class="included-list">
+                  <li>Ramme</li>
+                  <li>Akvarellpapir med designmal</li>
+                  <li>Akvarellmaling</li>
+                  <li>Pensler</li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- Lerret -->
+            <article class="workshop-card">
+              <div class="card-image image-placeholder" aria-hidden="true">
+                <span>Lerret</span>
+              </div>
+              <div class="card-content">
+                <h3>Lerretsmaling</h3>
+                <p class="price">300 kr</p>
+                <p class="card-description">
+                  Utforsk farger og former med akrylmaling på papir med mal.
+                </p>
+                <ul class="included-list">
+                  <li>Ramme</li>
+                  <li>Akrylpapir med designmal</li>
+                  <li>Akrylmaling</li>
+                  <li>Pensler</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Booking-seksjon med skjema -->
+      <section id="booking" class="booking section">
+        <div class="container booking-inner">
+          <div class="booking-info">
+            <h2>Book verksted</h2>
+            <p>
+              Velg verksted og foretrukket tidspunkt. Vi har ledige plasser
+              hverdager og i helgene.
+            </p>
+
+            <div class="time-info">
+              <h3>Foretrukket tid</h3>
+              <ul class="time-list">
+                <li><strong>Mandag–fredag:</strong> 10:00–18:00</li>
+                <li><strong>Lørdag:</strong> 11:00–16:00</li>
+                <li><strong>Søndag:</strong> Stengt</li>
+              </ul>
+            </div>
+
+            <div class="workshop-options">
+              <h3>Verkstedsalternativer</h3>
+              <ul class="option-list">
+                <li>Mosaikk Kunst – 400 kr</li>
+                <li>Akvarellmaling – 200 kr</li>
+                <li>Lerretsmaling – 300 kr</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Enkelt booking-skjema (ikke funksjonelt) -->
+          <form class="booking-form" action="#" method="post">
+            <h3>Send bookingforespørsel</h3>
+
+            <label for="name">Navn</label>
+            <input type="text" id="name" name="name" placeholder="Ditt navn" />
+
+            <label for="email">E-post</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="din@epost.no"
+            />
+
+            <label for="workshop">Velg verksted</label>
+            <select id="workshop" name="workshop">
+              <option value="">Velg et verksted</option>
+              <option value="mosaikk">Mosaikk Kunst – 400 kr</option>
+              <option value="akvarell">Akvarellmaling – 200 kr</option>
+              <option value="lerret">Lerretsmaling – 300 kr</option>
+            </select>
+
+            <label for="date">Ønsket dato</label>
+            <input type="date" id="date" name="date" />
+
+            <label for="time">Ønsket tidspunkt</label>
+            <input type="time" id="time" name="time" />
+
+            <label for="message">Melding (valgfritt)</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="Fortell oss om gruppen din eller spesielle ønsker"
+            ></textarea>
+
+            <button type="submit" class="btn btn-primary">
+              Send forespørsel
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Tilbakemeldinger fra kunder -->
+      <section id="tilbakemeldinger" class="testimonials section">
+        <div class="container">
+          <div class="section-header">
+            <h2>Tilbakemeldinger</h2>
+            <p>Dette sier noen av gjestene våre om opplevelsen hos oss.</p>
+          </div>
+
+          <div class="testimonial-cards">
+            <blockquote class="testimonial-card">
+              <p>
+                «Vi tok med barna våre på akvarellverksted, og alle elsket det!
+                Rolig atmosfære og hyggelige ansatte.»
+              </p>
+              <footer>
+                <cite>— Maria, mor til to</cite>
+              </footer>
+            </blockquote>
+
+            <blockquote class="testimonial-card">
+              <p>
+                «Perfekt teambuilding for jobben. Vi lagde mosaikk sammen og
+                hadde det kjempegøy. Anbefales på det sterkeste!»
+              </p>
+              <footer>
+                <cite>— Jonas, HR-ansvarlig</cite>
+              </footer>
+            </blockquote>
+
+            <blockquote class="testimonial-card">
+              <p>
+                «Jeg hadde aldri malt før, men med malen og veiledningen fikk
+                jeg et resultat jeg er stolt av. Veldig avslappende kveld.»
+              </p>
+              <footer>
+                <cite>— Ingrid, førstegangsgjest</cite>
+              </footer>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <!-- Galleri med eksempler på kundekunst -->
+      <section id="galleri" class="gallery section">
+        <div class="container">
+          <div class="section-header">
+            <h2>Galleri</h2>
+            <p>Et lite utvalg av kunst laget av gjester i verkstedene våre.</p>
+          </div>
+
+          <div class="gallery-grid">
+            <figure class="gallery-item">
+              <div class="gallery-image image-placeholder" aria-hidden="true">
+                <span>Mosaikk 1</span>
+              </div>
+              <figcaption>Solnedgang i mosaikk</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+              <div class="gallery-image image-placeholder" aria-hidden="true">
+                <span>Akvarell 1</span>
+              </div>
+              <figcaption>Blomster i akvarell</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+              <div class="gallery-image image-placeholder" aria-hidden="true">
+                <span>Lerret 1</span>
+              </div>
+              <figcaption>Abstrakt lerretsmaling</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+              <div class="gallery-image image-placeholder" aria-hidden="true">
+                <span>Mosaikk 2</span>
+              </div>
+              <figcaption>Geometrisk mosaikk</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+              <div class="gallery-image image-placeholder" aria-hidden="true">
+                <span>Akvarell 2</span>
+              </div>
+              <figcaption>Landskap i akvarell</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+              <div class="gallery-image image-placeholder" aria-hidden="true">
+                <span>Lerret 2</span>
+              </div>
+              <figcaption>Fargerik lerretsmaling</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer med kontaktinfo -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <p class="footer-logo">CRAFTSVILLA</p>
+          <p>Kreative verksteder for alle aldre.</p>
+        </div>
+
+        <div class="footer-contact">
+          <h2>Kontakt</h2>
+          <p>Storgata 12, 0001 Oslo</p>
+          <p>E-post: hei@craftsvilla.no</p>
+          <p>Telefon: 12 34 56 78</p>
+        </div>
+
+        <div class="footer-social">
+          <h2>Følg oss</h2>
+          <p>Instagram: @craftsvilla</p>
+          <p>Facebook: /craftsvilla</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container">
+          <p>&copy; 2026 CRAFTSVILLA. Alle rettigheter reservert.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

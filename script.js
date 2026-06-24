@@ -4,6 +4,7 @@
 
 const header = document.querySelector(".site-header");
 const navLinks = document.querySelectorAll(".nav-list a");
+const internalLinks = document.querySelectorAll('a[href^="#"]');
 const navToggle = document.getElementById("nav-toggle");
 
 // Removes .active class from all links and applies it to the clicked link
@@ -61,14 +62,29 @@ function scrollToSection(targetId) {
   window.requestAnimationFrame(step);
 }
 
-// Click event listener for navigation links
-navLinks.forEach((link) => {
+// Click event listener for all internal links, including nav links and buttons
+internalLinks.forEach((link) => {
   link.addEventListener("click", (event) => {
     event.preventDefault();
 
     const targetId = link.getAttribute("href");
 
-    setActiveLink(link);
+    // If the clicked link is a navigation link, mark it as active
+    if (link.classList.contains("active") || link.closest(".nav-list")) {
+      setActiveLink(link);
+    }
+
+    // If the hero button goes to booking, mark the Booking nav link as active
+    if (targetId === "#booking") {
+      const bookingLink = document.querySelector(
+        '.nav-list a[href="#booking"]',
+      );
+
+      if (bookingLink) {
+        setActiveLink(bookingLink);
+      }
+    }
+
     scrollToSection(targetId);
 
     // Close the mobile burger menu after clicking a link

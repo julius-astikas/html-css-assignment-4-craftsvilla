@@ -192,10 +192,20 @@ ul {
 .nav-list a {
   color: var(--color-brown-light);
   font-size: 0.95rem;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 4px;
+  transition:
+    color 0.3s ease,
+    text-decoration-color 0.3s ease;
 }
 
-.nav-list a:hover {
+/* Hover og aktiv lenke */
+.nav-list a:hover,
+.nav-list a.active {
   color: var(--color-terracotta);
+  text-decoration-color: var(--color-terracotta);
 }
 
 /* Skjult på desktop – brukes bare til burger-meny på mobil */

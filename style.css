@@ -27,7 +27,7 @@
 
 body {
   margin: 0;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: Arial, sans-serif;
   font-size: 1rem;
   line-height: 1.6;
   color: var(--color-brown);
@@ -128,22 +128,24 @@ ul {
 }
 
 /* ============================================
-   Placeholder for bilder
+   Bilder – fyller containere uten å strekke seg
    ============================================ */
-.image-placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(
-    135deg,
-    var(--color-cream-dark),
-    var(--color-green)
-  );
-  color: var(--color-brown);
-  font-size: 0.9rem;
-  font-weight: bold;
+.hero-image,
+.about-image,
+.card-image {
+  overflow: hidden;
   border-radius: var(--radius);
-  border: 2px dashed var(--color-green-dark);
+}
+
+.hero-image img,
+.about-image img,
+.card-image img,
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: var(--radius);
 }
 
 /* ============================================
@@ -243,7 +245,9 @@ ul {
     height: 3px;
     background-color: var(--color-brown);
     border-radius: 2px;
-    transition: transform 0.2s, opacity 0.2s;
+    transition:
+      transform 0.2s,
+      opacity 0.2s;
   }
 
   /* Gjør burger-ikonet om til et kryss når menyen er åpen */
@@ -288,6 +292,87 @@ ul {
   .nav-list li:last-child a {
     border-bottom: none;
   }
+
+  /* Mobil layout – luftig spacing etter bilder */
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .section {
+    padding: 2.5rem 0;
+  }
+
+  .section-header {
+    margin-bottom: 2rem;
+  }
+
+  .hero {
+    padding: 2rem 0 2.5rem;
+  }
+
+  /* Hero: tekst over bilde med jevn avstand */
+  .hero-inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5rem;
+  }
+
+  .hero-text {
+    flex: none;
+    width: 100%;
+  }
+
+  /* Hero-bilde: full bredde, moderat høyde */
+  .hero-image {
+    flex: none;
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 3 / 2;
+    min-height: 0;
+    max-height: 240px;
+  }
+
+  .about-inner {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .about-image {
+    order: -1;
+    width: 100%;
+    max-width: 100%;
+    max-height: 260px;
+  }
+
+  .workshop-cards {
+    gap: 1.25rem;
+  }
+
+  .workshop-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .gallery-grid {
+    gap: 1.25rem;
+  }
+
+  .gallery-item {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .testimonial-cards {
+    gap: 1.25rem;
+  }
+
+  .testimonial-card {
+    max-width: 100%;
+  }
+
+  .booking-inner {
+    gap: 2rem;
+  }
 }
 
 /* ============================================
@@ -326,7 +411,9 @@ ul {
 
 .hero-image {
   flex: 1 1 280px;
-  min-height: 260px;
+  aspect-ratio: 4 / 3;
+  min-height: 220px;
+  max-height: 340px;
 }
 
 /* ============================================
@@ -345,7 +432,9 @@ ul {
 
 .about-image {
   flex: 1 1 280px;
-  min-height: 280px;
+  aspect-ratio: 4 / 3;
+  min-height: 220px;
+  max-height: 360px;
 }
 
 .about-text {
@@ -552,6 +641,7 @@ ul {
 .gallery-image {
   height: 180px;
   margin-bottom: 0.5rem;
+  overflow: hidden;
 }
 
 .gallery-item figcaption {
@@ -606,28 +696,4 @@ ul {
   text-align: center;
   font-size: 0.85rem;
   color: var(--color-cream-dark);
-}
-
-/* ============================================
-   Responsivt design for mobil
-   ============================================ */
-@media (max-width: 600px) {
-  .section {
-    padding: 2.5rem 0;
-  }
-
-  .hero-inner,
-  .about-inner {
-    flex-direction: column;
-  }
-
-  .about-image {
-    order: -1;
-  }
-
-  .workshop-card,
-  .testimonial-card,
-  .gallery-item {
-    max-width: 100%;
-  }
 }

@@ -110,3 +110,36 @@ if (hash) {
     setActiveLink(homeLink);
   }
 }
+
+// ============================================
+// Hero Video Bounce (Yo-Yo) Effect
+// ============================================
+
+const heroVideo = document.querySelector(".hero-video");
+
+if (heroVideo) {
+  // Remove the native 'loop' attribute so we can control the replay manually
+  heroVideo.removeAttribute("loop");
+
+  // Track whether the video is playing backwards
+  let isReversing = false;
+
+  // Interval running at ~25 frames per second to handle the reverse playback smoothly
+  setInterval(() => {
+    if (isReversing) {
+      // If reversing, decrement the video's current time by a small fraction (0.04s)
+      if (heroVideo.currentTime > 0.1) {
+        heroVideo.currentTime -= 0.04;
+      } else {
+        // Once the video reaches the beginning, switch back to forward playback
+        isReversing = false;
+        heroVideo.play().catch(() => {});
+      }
+    }
+  }, 40);
+
+  // Listen for the 'ended' event to know when the video reaches its natural end
+  heroVideo.addEventListener("ended", () => {
+    isReversing = true;
+  });
+}

@@ -135,14 +135,13 @@ ul {
 /* ============================================
    Bilder og video
    ============================================ */
-.hero-image,
+.hero-video-wrapper,
 .about-image,
 .card-image {
   overflow: hidden;
   border-radius: var(--radius);
 }
 
-.hero-image img,
 .hero-video,
 .about-image img,
 .card-image img,
@@ -152,11 +151,6 @@ ul {
   object-fit: cover;
   display: block;
   border-radius: var(--radius);
-}
-
-/* Desktop crop for hero-video */
-.hero-video {
-  object-position: 70% center;
 }
 
 /* ============================================
@@ -262,7 +256,7 @@ ul {
   color: var(--color-brown-light);
 }
 
-.hero-image {
+.hero-video-wrapper {
   width: 100%;
   max-width: 950px;
   aspect-ratio: 16 / 9;
@@ -676,7 +670,7 @@ ul {
     max-width: 360px;
   }
 
-  .hero-image {
+  .hero-video-wrapper {
     width: 100%;
     max-width: 100%;
     aspect-ratio: 2 / 2;

@@ -215,3 +215,21 @@ if (galleryImage && gallerySlides.length) {
 
   showSlide(currentIndex);
 }
+
+// ============================================
+// Booking Form – demo submit
+// ============================================
+
+const bookingForm = document.querySelector(".booking-form");
+
+if (bookingForm) {
+  bookingForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    alert(
+      "Takk for forespørselen! Dette er en demo, så skjemaet blir ikke sendt.",
+    );
+
+    bookingForm.reset();
+  });
+}

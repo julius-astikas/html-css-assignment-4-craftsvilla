@@ -143,3 +143,75 @@ if (heroVideo) {
     isReversing = true;
   });
 }
+
+// ============================================
+// Gallery Slider
+// ============================================
+
+const gallerySlides = [
+  {
+    src: "images/gallery-akvarell-1.png",
+    alt: "Akvarellmaleri av blomster laget av en gjest",
+    caption: "Blomster i akvarell",
+  },
+  {
+    src: "images/gallery-akvarell-2.png",
+    alt: "Akvarelllandskap malt av en gjest",
+    caption: "Landskap i akvarell",
+  },
+  {
+    src: "images/gallery-larret-1.png",
+    alt: "Abstrakt lerretsmaling laget av en gjest",
+    caption: "Abstrakt lerretsmaling",
+  },
+  {
+    src: "images/gallery-larret-2.png",
+    alt: "Fargerik lerretsmaling laget av en gjest",
+    caption: "Fargerik lerretsmaling",
+  },
+  {
+    src: "images/gallery-mosaic-1.png",
+    alt: "Mosaikkbilde av solnedgang laget av en gjest",
+    caption: "Solnedgang i mosaikk",
+  },
+  {
+    src: "images/gallery-mosaic-2.png",
+    alt: "Geometrisk mosaikkbilde laget av en gjest",
+    caption: "Geometrisk mosaikk",
+  },
+];
+
+const galleryImage = document.querySelector("#gallery-image");
+const galleryCaption = document.querySelector("#gallery-caption");
+const galleryCounter = document.querySelector("#gallery-counter");
+const galleryPrevBtn = document.querySelector("#gallery-prev");
+const galleryNextBtn = document.querySelector("#gallery-next");
+
+if (galleryImage && gallerySlides.length) {
+  let currentIndex = 0;
+
+  function showSlide(index) {
+    const slide = gallerySlides[index];
+    galleryImage.src = slide.src;
+    galleryImage.alt = slide.alt;
+    galleryCaption.textContent = slide.caption;
+    galleryCounter.textContent = `${index + 1} / ${gallerySlides.length}`;
+  }
+
+  if (galleryPrevBtn) {
+    galleryPrevBtn.addEventListener("click", () => {
+      currentIndex =
+        (currentIndex - 1 + gallerySlides.length) % gallerySlides.length;
+      showSlide(currentIndex);
+    });
+  }
+
+  if (galleryNextBtn) {
+    galleryNextBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % gallerySlides.length;
+      showSlide(currentIndex);
+    });
+  }
+
+  showSlide(currentIndex);
+}

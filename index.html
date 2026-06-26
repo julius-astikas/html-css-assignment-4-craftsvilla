@@ -300,60 +300,38 @@
             <p>Et lite utvalg av kunst laget av gjester i verkstedene våre.</p>
           </div>
 
-          <div class="gallery-grid">
-            <figure class="gallery-item">
-              <img
-                class="gallery-image"
-                src="images/gallery-mosaic-1.png"
-                alt="Mosaikkbilde av solnedgang laget av en gjest"
-              />
-              <figcaption>Solnedgang i mosaikk</figcaption>
+          <div class="gallery-slider">
+            <figure class="gallery-slide">
+              <div class="gallery-slider-view">
+                <img
+                  class="gallery-image"
+                  id="gallery-image"
+                  src="images/gallery-akvarell-1.png"
+                  alt="Akvarellmaleri av blomster laget av en gjest"
+                />
+              </div>
+              <figcaption id="gallery-caption">Blomster i akvarell</figcaption>
             </figure>
 
-            <figure class="gallery-item">
-              <img
-                class="gallery-image"
-                src="images/gallery-akvarell-1.png"
-                alt="Akvarellmaleri av blomster laget av en gjest"
-              />
-              <figcaption>Blomster i akvarell</figcaption>
-            </figure>
-
-            <figure class="gallery-item">
-              <img
-                class="gallery-image"
-                src="images/gallery-larret-1.png"
-                alt="Abstrakt lerretsmaling laget av en gjest"
-              />
-              <figcaption>Abstrakt lerretsmaling</figcaption>
-            </figure>
-
-            <figure class="gallery-item">
-              <img
-                class="gallery-image"
-                src="images/gallery-mosaic-2.png"
-                alt="Geometrisk mosaikkbilde laget av en gjest"
-              />
-              <figcaption>Geometrisk mosaikk</figcaption>
-            </figure>
-
-            <figure class="gallery-item">
-              <img
-                class="gallery-image"
-                src="images/gallery-akvarell-2.png"
-                alt="Akvarelllandskap malt av en gjest"
-              />
-              <figcaption>Landskap i akvarell</figcaption>
-            </figure>
-
-            <figure class="gallery-item">
-              <img
-                class="gallery-image"
-                src="images/gallery-larret-2.png"
-                alt="Fargerik lerretsmaling laget av en gjest"
-              />
-              <figcaption>Fargerik lerretsmaling</figcaption>
-            </figure>
+            <div class="gallery-slider-controls">
+              <button
+                type="button"
+                class="btn gallery-btn"
+                id="gallery-prev"
+              >
+                Forrige
+              </button>
+              <p class="gallery-counter" id="gallery-counter" aria-live="polite">
+                1 / 6
+              </p>
+              <button
+                type="button"
+                class="btn gallery-btn"
+                id="gallery-next"
+              >
+                Neste
+              </button>
+            </div>
           </div>
         </div>
       </section>
